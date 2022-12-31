@@ -17,7 +17,7 @@ app = FastAPI(
     },
     license_info={
         "name": "MIT",
-    }
+    },
 )
 
 
