@@ -2,9 +2,7 @@ from fastapi import FastAPI
 
 from api import users, courses, sections
 from db.db_setup import engine
-from db.models import course
-
-from db.models import user
+from db.models import course, user
 
 user.Base.metadata.create_all(bind=engine)
 course.Base.metadata.create_all(bind=engine)
