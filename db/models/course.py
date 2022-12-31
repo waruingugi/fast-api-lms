@@ -72,7 +72,7 @@ class StudentCourse(Timestamp, Base):
     course = relationship("Course", back_populates="student_courses")
 
 
-class CompletedContentVlick(Timestamp, Base):
+class CompletedContentBlock(Timestamp, Base):
     """
     This shows when a student has completed a content block
     """
@@ -85,5 +85,5 @@ class CompletedContentVlick(Timestamp, Base):
     feedback = Column(Text, nullable=True)
     grade = Column(Integer, default=0)
 
-    studnet = relationship(User, back_populates="student_content_blocks")
+    student = relationship(User, back_populates="student_content_blocks")
     content_block = relationship(ContentBlock, back_populates="completed_content_blocks")
